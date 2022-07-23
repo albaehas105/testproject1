@@ -1,11 +1,11 @@
-name: AWS
+name: B45
 on: workflow_dispatch
 
 jobs:
   build:
 
     runs-on: windows-latest
-    timeout-minutes: 9999
+    timeout-minutes: 43200
 
     steps:
 
