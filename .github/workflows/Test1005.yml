@@ -1,4 +1,4 @@
-name: c1
+name: AWS
 on: workflow_dispatch
 
 jobs:
@@ -14,6 +14,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/ngrok.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/winrar.exe -OutFile winrar.exe
+
     - name: Extract ngrok Files
       run: Expand-Archive ngrok.zip
 
@@ -37,7 +38,8 @@ jobs:
 
     - name: Install Winrar
       run: cmd /c C:\Users\Public\Desktop\winrar.exe winrar.exe /s
-      - name: TimeCount
+      
+    - name: TimeCount
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
