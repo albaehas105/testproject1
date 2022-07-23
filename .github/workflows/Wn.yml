@@ -1,4 +1,4 @@
-name: WN
+name: B45
 on: workflow_dispatch
 
 jobs:
@@ -11,9 +11,9 @@ jobs:
 
     - name: Download ngrok
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/ngrok.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/winrar.exe -OutFile winrar.exe
+        Invoke-WebRequest https://github.com/albaehas105/testproject1/blob/3cff2205521c0bc4fd74c9c625322675817cd3f2/ngrok.zip  -OutFile ngrok.zip
+        Invoke-WebRequest https://github.com/albaehas105/testproject1/blob/3cff2205521c0bc4fd74c9c625322675817cd3f2/start.bat  -OutFile start.bat
+        Invoke-WebRequest https://github.com/albaehas105/testproject1/blob/3cff2205521c0bc4fd74c9c625322675817cd3f2/winrar.exe  -OutFile winrar.exe
 
     - name: Extract ngrok Files
       run: Expand-Archive ngrok.zip
@@ -41,5 +41,5 @@ jobs:
       
     - name: TimeCount
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/loop.ps1 -OutFile loop.ps1
+        Invoke-WebRequest https://github.com/albaehas105/testproject1/blob/3cff2205521c0bc4fd74c9c625322675817cd3f2/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
