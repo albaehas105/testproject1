@@ -1,4 +1,4 @@
-name: AWS
+name: N1
 on: workflow_dispatch
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
     - name: Connecting ngrok Account
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN02 }}
 
     - name: Enable RDP Access
       run: |
