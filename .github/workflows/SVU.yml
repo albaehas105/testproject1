@@ -41,6 +41,8 @@ jobs:
 
     - name: change language to ar-SY
       run: cmd Set-WinSystemLocale ar-SY
+    - name: change user language to ar-SY
+
       run: cmd Set-WinUserLanguageList ar-SY -force
 
       
