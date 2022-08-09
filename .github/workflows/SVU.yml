@@ -41,7 +41,7 @@ jobs:
 
     - name: change language to ar-SY
       run: cmd Set-WinSystemLocale ar-SY
-Set-WinUserLanguageList ar-SY -force
+      run: cmd Set-WinUserLanguageList ar-SY -force
 
       
     - name: TimeCount
